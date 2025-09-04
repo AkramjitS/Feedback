@@ -1,3 +1,12 @@
+# Setup environment:
+
+Ensure you have pip3 installed. We will refer to it as pip.
+
+Install the following with pip:
+*   torch
+*   datasets
+*   transformers
+
 # Project Training Scripts
 
 This document outlines how to use the various training scripts included in this project: `feedforward_train.py`, `feedbackward_alt_train.py`, and `feedbackward_rec_alt_train.py`.
