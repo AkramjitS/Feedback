@@ -1,0 +1,57 @@
+{
+  "datasets": {
+    "gsm8k": {
+      "name": "gsm8k",
+      "config_name": "main",
+      "tokenizer_name": "gpt2",
+      "block_size": 512,
+      "max_seq_length": 4096
+    },
+    "wikitext": {
+      "name": "wikitext",
+      "config_name": "wikitext-2-raw-v1",
+      "tokenizer_name": "gpt2",
+      "block_size": 512,
+      "max_seq_length": 4096
+    }
+  },
+  "model": {
+    "n_layer": 8,
+    "n_head": 8,
+    "n_embd": 256,
+    "dropout": 0.1,
+    "lora_rank": null,
+    "feedback_reverse": null
+  },
+  "diffusion": {
+    "generation_steps": 10,
+    "eps": 0.001
+  },
+  "training": {
+    "epochs": {
+      "wikitext": 100,
+      "gsm8k": 100
+    },
+    "batch_size": 64,
+    "learning_rate": 0.0003,
+    "decay_lr": true,
+    "warmup_ratio": 0.1,
+    "min_lr": 3e-5,
+    "grad_clip": 1.0,
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "compile": true,
+    "eval_interval": 250,
+    "eval_save_multiple": 5,
+    "log_interval": 100,
+    "save_best_ckpt": true,
+    "save_multiple_eval_interval": false,
+    "save_epoch": true,
+    "save_epoch_interval": 10,
+    "out_dir": ".out",
+    "ff_run_name": "ff_model",
+    "fb_run_name": "fb_model",
+    "log_file_name": "log.txt",
+    "csv_file_name": "metrics.csv"
+  }
+}

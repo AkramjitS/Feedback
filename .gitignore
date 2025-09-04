@@ -1,0 +1,7 @@
+.feedback/*
+.feedforward/*
+__*
+.vscode/*
+nohup*
+*.pt
+*_old_*
